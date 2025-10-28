@@ -24,12 +24,12 @@ export default function RefinancingPage() {
                 className="h-12 w-auto"
               />
             </Link>
-            <a
-              href="#apply"
+            <Link
+              href="/apply"
               className="bg-[#E87813] text-white px-6 py-3 rounded-[2px] font-semibold hover:bg-[#E97E15] transition-all shadow-lg"
             >
               Get Started
-            </a>
+            </Link>
           </div>
         </div>
       </nav>

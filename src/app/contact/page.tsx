@@ -120,8 +120,8 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold text-black mb-6">Contact Information</h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#E87813] rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Phone className="text-white" size={24} />
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                    <Phone className="text-[#E87813]" size={24} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-black mb-1">Phone</h3>
@@ -130,8 +130,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#E87813] rounded-xl flex items-center justify-center flex-shrink-0">
-                    <MapPin className="text-white" size={24} />
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                    <MapPin className="text-[#E87813]" size={24} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-black mb-1">Shirley Street Location</h3>
@@ -144,8 +144,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#E87813] rounded-xl flex items-center justify-center flex-shrink-0">
-                    <MapPin className="text-white" size={24} />
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                    <MapPin className="text-[#E87813]" size={24} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-black mb-1">Carmichael Road Location</h3>
@@ -158,8 +158,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#E87813] rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Mail className="text-white" size={24} />
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                    <Mail className="text-[#E87813]" size={24} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-black mb-1">Email</h3>
@@ -308,7 +308,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-[#E87813] text-white px-8 py-4 rounded-[2px] font-bold text-lg hover:bg-[#E97E15] transition-all shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full bg-white text-[#E87813] px-8 py-4 rounded-[2px] font-bold text-lg border border-[#E87813]/40 hover:bg-[#FFF4E8] transition-all shadow-md disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>Processing...</>
@@ -340,10 +340,10 @@ export default function ContactPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Shirley Street Map */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
-              <div className="p-6 bg-gradient-to-r from-[#E87813] to-[#E97E15]">
-                <h3 className="text-2xl font-bold text-white mb-2">Shirley Street Location</h3>
-                <p className="text-white/90">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md">
+              <div className="p-6 bg-white shadow-sm">
+                <h3 className="text-2xl font-bold text-[#E87813] mb-2">Shirley Street Location</h3>
+                <p className="text-[#E87813]/80">
                   Shirley Street<br />
                   P.O. Box N-3180<br />
                   Nassau, The Bahamas
@@ -364,10 +364,10 @@ export default function ContactPage() {
             </div>
 
             {/* Carmichael Road Map */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
-              <div className="p-6 bg-gradient-to-r from-[#ff990a] to-[#e87813]">
-                <h3 className="text-2xl font-bold text-white mb-2">Carmichael Road Location</h3>
-                <p className="text-white/90">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md">
+              <div className="p-6 bg-white shadow-sm">
+                <h3 className="text-2xl font-bold text-[#E87813] mb-2">Carmichael Road Location</h3>
+                <p className="text-[#E87813]/80">
                   Carmichael Road<br />
                   P.O. Box N-3180<br />
                   Nassau, The Bahamas

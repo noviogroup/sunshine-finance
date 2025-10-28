@@ -113,7 +113,7 @@ export default function HomeClient() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                href="/apply"
                 className="inline-flex items-center justify-center bg-[#E87813] text-white px-8 py-4 rounded-[2px] font-bold text-lg hover:bg-[#E97E15] transition-all shadow-xl hover:shadow-2xl"
               >
                 Apply Now
@@ -251,7 +251,7 @@ export default function HomeClient() {
                     <FileCheck className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-[#003366] text-lg mb-1">Local Expertise</h3>
+                    <h3 className="font-bold text-[#141414] text-lg mb-1">Local Expertise</h3>
                   </div>
                 </div>
 
@@ -260,7 +260,7 @@ export default function HomeClient() {
                     <DollarSign className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-[#003366] text-lg mb-1">Competitive Rates</h3>
+                    <h3 className="font-bold text-[#141414] text-lg mb-1">Competitive Rates</h3>
                   </div>
                 </div>
 
@@ -269,7 +269,7 @@ export default function HomeClient() {
                     <Zap className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-[#003366] text-lg mb-1">Fast & Easy Process</h3>
+                    <h3 className="font-bold text-[#141414] text-lg mb-1">Fast & Easy Process</h3>
                   </div>
                 </div>
 
@@ -278,7 +278,7 @@ export default function HomeClient() {
                     <Headphones className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-[#003366] text-lg mb-1">24/7 Support</h3>
+                    <h3 className="font-bold text-[#141414] text-lg mb-1">24/7 Support</h3>
                   </div>
                 </div>
               </div>
@@ -324,7 +324,7 @@ export default function HomeClient() {
               <div className="w-2 h-2 bg-[#E87813] rounded-full"></div>
               <span className="text-[#E87813] font-bold text-sm uppercase tracking-wide">How It Work</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#003366] mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#141414] mb-6">
               Our lending process <span className="font-bold text-[#E87813]">easy steps</span> to get covered
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -340,7 +340,7 @@ export default function HomeClient() {
                     <path d="M9 11l3 3L22 4"/>
                     <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
                   </svg>
-                  <h3 className="text-xl font-bold text-[#003366] mb-3">Apply</h3>
+                  <h3 className="text-xl font-bold text-[#141414] mb-3">Apply</h3>
                   <p className="text-gray-600 text-sm leading-relaxed mb-6">
                     Complete our simple online application or visit our Nassau office. We'll need basic information about you and your financing needs.
                   </p>
@@ -372,7 +372,7 @@ export default function HomeClient() {
                     <path d="M16 17H8"/>
                     <path d="M10 9H8"/>
                   </svg>
-                  <h3 className="text-xl font-bold text-[#003366] mb-3">Review</h3>
+                  <h3 className="text-xl font-bold text-[#141414] mb-3">Review</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     Our team reviews your application and works with you to structure the best possible loan package. Most decisions within 48 hours.
                   </p>
@@ -391,7 +391,7 @@ export default function HomeClient() {
                     <path d="M12 2v20"/>
                     <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
                   </svg>
-                  <h3 className="text-xl font-bold text-[#003366] mb-3">Funding</h3>
+                  <h3 className="text-xl font-bold text-[#141414] mb-3">Funding</h3>
                   <p className="text-gray-600 text-sm leading-relaxed mb-6">
                     Once approved, we move quickly to finalize paperwork and disburse your funds. Get the capital you need when you need it.
                   </p>

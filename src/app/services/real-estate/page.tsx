@@ -24,12 +24,12 @@ export default function RealEstateFinancingPage() {
                 className="h-12 w-auto"
               />
             </Link>
-            <a
-              href="#apply"
+            <Link
+              href="/apply"
               className="bg-[#E87813] text-white px-6 py-3 rounded-[2px] font-semibold hover:bg-[#E97E15] transition-all shadow-lg"
             >
               Apply Now
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
@@ -352,13 +352,13 @@ export default function RealEstateFinancingPage() {
             Get pre-approved in 24 hours. Our team is ready to help you secure your dream property in The Bahamas.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:info@sunshinefinance.bs"
+            <Link
+              href="/apply"
               className="inline-flex items-center justify-center bg-white text-[#E87813] px-8 py-4 rounded-[2px] font-bold text-lg hover:bg-gray-50 transition-all shadow-xl"
             >
               Apply Now
               <ChevronRight className="ml-2" size={20} />
-            </a>
+            </Link>
             <a
               href="tel:+12425026500"
               className="inline-flex items-center justify-center bg-[#003366] text-white px-8 py-4 rounded-[2px] font-semibold text-lg hover:bg-[#004080] transition-all shadow-lg"

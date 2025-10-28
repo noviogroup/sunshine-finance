@@ -89,14 +89,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-500 text-sm">
+        <div className="mt-12">
+          <div className="bg-[#E87813] text-white rounded-xl px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4 shadow-sm">
+            <p className="text-sm">
               © 2025 Sunshine Finance Ltd. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
-              <Link href="/privacy" className="text-gray-500 hover:text-[#E87813] transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="text-gray-500 hover:text-[#E87813] transition-colors">Terms of Service</Link>
+              <Link href="/privacy" className="text-white hover:text-white/80 transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="text-white hover:text-white/80 transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>

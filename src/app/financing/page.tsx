@@ -14,7 +14,7 @@ export default function FinancingPage() {
       subtitle: "School Loan Program",
       description: "Sunshine Finance offers a School Loan Program (Education Loans) where you can be confident, every year, your back to school money will be in place; tuition, college fees, books, uniforms, travel.",
       features: ["Annual education funding", "Covers tuition & fees", "Books & uniforms", "Travel expenses"],
-      color: "bg-gradient-to-br from-[#ffb224] to-[#e87813]"
+      backgroundImage: "/Black-College.jpg",
     },
     {
       icon: Home,
@@ -22,7 +22,7 @@ export default function FinancingPage() {
       subtitle: "Estate Equity Loans",
       description: "Estate Equity Loans are perfect if you need money for your business, school, home remodeling or for any worthwhile purpose, and have real estate to back your request? Let us help you finance your goals.",
       features: ["Business investments", "Home remodeling", "Educational expenses", "Real estate backed"],
-      color: "bg-gradient-to-br from-[#ffb224] to-[#e87813]"
+      backgroundImage: "/amily-happy-outdoors.jpg",
     },
     {
       icon: Plane,
@@ -30,7 +30,7 @@ export default function FinancingPage() {
       subtitle: "Vacation & Lifestyle Loans",
       description: "Need money for your Vacation, new business, school, home remodeling or for any worthwhile purpose, and have real estate to back your request? Let us help you finance your goals.",
       features: ["Vacation funding", "Business opportunities", "Home improvements", "Flexible terms"],
-      color: "bg-gradient-to-br from-[#ffb224] to-[#e87813]"
+      backgroundImage: "Black-FamilyVacation(1).jpg",
     },
     {
       icon: DollarSign,
@@ -38,7 +38,7 @@ export default function FinancingPage() {
       subtitle: "Quick Cash Loans",
       description: "Sunshine Finance begins its loan product as low as $500, provides a 48 hour decision time and next day payout on an approval. Repayment amounts are affordable and there is no penalty to prepay, Try Us!",
       features: ["Loans from $500", "48-hour decision", "Next day payout", "No prepayment penalty"],
-      color: "bg-gradient-to-br from-[#ffb224] to-[#e87813]"
+      backgroundImage: "/Black-Family-Pictures.jpg",
     },
     {
       icon: Car,
@@ -46,7 +46,7 @@ export default function FinancingPage() {
       subtitle: "Auto Loans",
       description: "Auto Loans for those who meet our credit guidelines benefit from Negotiable Down Payment, Low Monthly Payments, Insurance Premium financing included, Quick Turnaround.",
       features: ["Negotiable down payment", "Low monthly payments", "Insurance financing", "Quick turnaround"],
-      color: "bg-gradient-to-br from-[#ffb224] to-[#e87813]"
+      backgroundImage: "/new-car.jpg",
     },
     {
       icon: CreditCard,
@@ -54,7 +54,7 @@ export default function FinancingPage() {
       subtitle: "Debt Consolidation - Fresh Start",
       description: "\"Fresh Start\" For many, debt consolidation is the fast road to financial recovery. Let us payoff your bills, loans, credit cards – and give you one easy and lower monthly payment, helping you to save!",
       features: ["Consolidate all debts", "One easy payment", "Lower monthly costs", "Financial recovery"],
-      color: "bg-gradient-to-br from-[#ffb224] to-[#e87813]"
+      backgroundImage: "/BlackFamilyVacation.jpg",
     }
   ];
 
@@ -92,12 +92,21 @@ export default function FinancingPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {loanOptions.map((loan, index) => (
               <div key={index} className="bg-white rounded-[6px] overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group flex flex-col">
-                {/* Icon Header with Gradient */}
-                <div className={`${loan.color} p-8 text-white relative overflow-hidden`}>
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-                  <loan.icon size={48} className="relative z-10 mb-4" />
-                  <h3 className="text-2xl font-bold mb-1 relative z-10">{loan.title}</h3>
-                  <p className="text-white/90 text-sm relative z-10">{loan.subtitle}</p>
+                {/* Icon Header with gradient overlay */}
+                <div className="relative isolate p-8 text-white overflow-hidden">
+                  {loan.backgroundImage && (
+                    <div
+                      className="absolute inset-0 bg-cover bg-center z-0"
+                      style={{ backgroundImage: `url(${loan.backgroundImage})` }}
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#E87813]/90 via-transparent to-transparent z-10" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 z-20" />
+                  <div className="relative z-30">
+                    <loan.icon size={48} className="mb-4" />
+                    <h3 className="text-2xl font-bold mb-1">{loan.title}</h3>
+                    <p className="text-white/90 text-sm">{loan.subtitle}</p>
+                  </div>
                 </div>
 
                 {/* Content */}
@@ -117,12 +126,12 @@ export default function FinancingPage() {
                   </div>
 
                   {/* Apply Button */}
-                  <a
-                    href="/#apply"
-                    className="block w-full bg-[#E87813] text-white text-center px-6 py-3 rounded-[2px] font-semibold hover:bg-[#E97E15] transition-all mt-auto"
+                  <Link
+                    href="/apply"
+                    className="block w-full bg-white text-[#E87813] text-center px-6 py-3 rounded-[2px] font-semibold border border-[#E87813]/40 hover:bg-[#FFF4E8] transition-all mt-auto"
                   >
                     Apply Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -138,7 +147,7 @@ export default function FinancingPage() {
               <div className="w-2 h-2 bg-[#E87813] rounded-full"></div>
               <span className="text-[#E87813] font-bold text-sm uppercase tracking-wide">Benefits</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#003366] mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#141414] mb-6">
               Why Choose <span className="text-[#E87813]">Sunshine Finance</span>
             </h2>
           </div>
@@ -148,7 +157,7 @@ export default function FinancingPage() {
               <div className="w-20 h-20 bg-[#E87813] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Clock className="text-white" size={36} />
               </div>
-              <h3 className="text-2xl font-bold text-[#003366] mb-4">Fast Approvals</h3>
+              <h3 className="text-2xl font-bold text-[#141414] mb-4">Fast Approvals</h3>
               <p className="text-gray-600 leading-relaxed">
                 Most applications reviewed within 24-48 hours with quick decision times and next-day payouts available.
               </p>
@@ -158,7 +167,7 @@ export default function FinancingPage() {
               <div className="w-20 h-20 bg-[#E87813] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="text-white" size={36} />
               </div>
-              <h3 className="text-2xl font-bold text-[#003366] mb-4">Flexible Terms</h3>
+              <h3 className="text-2xl font-bold text-[#141414] mb-4">Flexible Terms</h3>
               <p className="text-gray-600 leading-relaxed">
                 We tailor loan products to meet your needs and capacity. No prepayment penalties on most loans.
               </p>
@@ -168,7 +177,7 @@ export default function FinancingPage() {
               <div className="w-20 h-20 bg-[#E87813] rounded-full flex items-center justify-center mx-auto mb-6">
                 <FileText className="text-white" size={36} />
               </div>
-              <h3 className="text-2xl font-bold text-[#003366] mb-4">Simple Process</h3>
+              <h3 className="text-2xl font-bold text-[#141414] mb-4">Simple Process</h3>
               <p className="text-gray-600 leading-relaxed">
                 Straightforward application process with clear requirements and helpful staff to guide you through.
               </p>
@@ -185,7 +194,7 @@ export default function FinancingPage() {
               <div className="w-2 h-2 bg-[#E87813] rounded-full"></div>
               <span className="text-[#E87813] font-bold text-sm uppercase tracking-wide">Application Requirements</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#003366] mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#141414] mb-6">
               What You'll <span className="text-[#E87813]">Need to Apply</span>
             </h2>
           </div>
@@ -199,20 +208,20 @@ export default function FinancingPage() {
           </div>
 
           <div className="mt-12 bg-white rounded-[6px] p-8 max-w-4xl mx-auto shadow-md">
-            <h3 className="text-2xl font-bold text-[#003366] mb-6 text-center">Ready to Get Started?</h3>
+            <h3 className="text-2xl font-bold text-[#141414] mb-6 text-center">Ready to Get Started?</h3>
             <p className="text-lg text-gray-600 text-center mb-8">
               Gather your documents and apply today. Our team is ready to help you achieve your financial goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/#apply"
+              <Link
+                href="/apply"
                 className="inline-flex items-center justify-center bg-[#E87813] text-white px-8 py-4 rounded-[2px] font-bold text-lg hover:bg-[#E97E15] transition-all shadow-lg"
               >
                 Apply Now
-              </a>
+              </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center bg-white text-[#003366] px-8 py-4 rounded-[2px] font-semibold text-lg hover:bg-gray-50 transition-all border-2 border-[#003366]"
+                className="inline-flex items-center justify-center bg-white text-[#141414] px-8 py-4 rounded-[2px] font-semibold text-lg hover:bg-gray-50 transition-all border-2 border-[#141414]"
               >
                 Contact Us
               </Link>

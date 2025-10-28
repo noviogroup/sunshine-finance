@@ -145,11 +145,11 @@ export default function LoanCalculator() {
             </div>
             <div className="bg-[#F4F4F4] rounded-xl p-4">
               <p className="text-sm font-medium text-gray-600">Total Interest</p>
-              <p className="text-2xl font-bold text-[#003366] mt-1">{formatCurrency(totalInterest)}</p>
+              <p className="text-2xl font-bold text-[#141414] mt-1">{formatCurrency(totalInterest)}</p>
             </div>
             <div className="bg-[#F4F4F4] rounded-xl p-4">
               <p className="text-sm font-medium text-gray-600">Total Payment</p>
-              <p className="text-2xl font-bold text-[#003366] mt-1">{formatCurrency(totalPayment)}</p>
+              <p className="text-2xl font-bold text-[#141414] mt-1">{formatCurrency(totalPayment)}</p>
             </div>
           </div>
         </div>

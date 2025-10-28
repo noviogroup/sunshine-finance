@@ -34,7 +34,7 @@ export default function AboutPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="prose max-w-none">
-            <h2 className="text-3xl font-bold text-[#003366] mb-6">Our Story</h2>
+            <h2 className="text-3xl font-bold text-[#141414] mb-6">Our Story</h2>
             <p className="text-lg mb-6">
               Founded in 2010, Sunshine Finance has been a trusted partner for private lending in The Bahamas for over a decade.
               We specialize in providing flexible financing solutions tailored to the unique needs of our clients.
@@ -46,7 +46,7 @@ export default function AboutPage() {
               our team of experienced professionals is here to help you achieve your financial goals.
             </p>
 
-            <h2 className="text-3xl font-bold text-[#003366] mb-6 mt-10">Our Values</h2>
+            <h2 className="text-3xl font-bold text-[#141414] mb-6 mt-10">Our Values</h2>
             <p className="text-lg mb-6">
               At Sunshine Finance, we pride ourselves on our commitment to personalized service,
               competitive rates, and quick approvals. We believe in building long-term relationships with our clients
@@ -68,7 +68,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold text-[#003366] mb-6 mt-10">The Sunshine Boys Legacy</h2>
+            <h2 className="text-3xl font-bold text-[#141414] mb-6 mt-10">The Sunshine Boys Legacy</h2>
             <p className="text-lg mb-6">
               Sunshine Finance is part of the broader Sunshine Group of Companies, established by legendary Bahamian entrepreneurs known as the "Sunshine Boys."
               Their vision and entrepreneurial spirit have been driving forces in The Bahamas' financial landscape for decades.
