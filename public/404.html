@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found - Sunshine Finance</title>
+  <script>
+    // Single Page App redirect script
+    // Handles redirects for SPA deployed on Netlify
+    (function() {
+      // Get the current path
+      var path = window.location.pathname;
+      var segmentCount = 0;
+      var l = window.location;
+
+      // Redirect to the SPA index with the path as a hash
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        '/' + (path.length > 0 ? '?p=' + path : '')
+      );
+    })();
+  </script>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      text-align: center;
+      padding: 50px 20px;
+      margin: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #E87813;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .logo {
+      max-width: 200px;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #E87813;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #d26b12;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="/main-sunshinefinance-logo-notag-2019.png" alt="Sunshine Finance" class="logo">
+    <h1>Page Not Found</h1>
+    <p>We couldn't find the page you're looking for. You will be redirected to our homepage momentarily.</p>
+    <a href="/" class="btn">Return to Homepage</a>
+  </div>
+</body>
+</html>
