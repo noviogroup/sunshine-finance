@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Building2, CheckCircle, ChevronRight, Home, TrendingUp, Shield, Clock, DollarSign, FileText, ChevronDown, ArrowLeft } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function RealEstateFinancingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -13,30 +15,20 @@ export default function RealEstateFinancingPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <Link href="/" className="flex items-center">
-              <img
-                src="/main-sunshinefinance-logo-notag-2019.png"
-                alt="Sunshine Finance"
-                className="h-12 w-auto"
-              />
-            </Link>
-            <Link
-              href="/apply"
-              className="bg-[#E87813] text-white px-6 py-3 rounded-[2px] font-semibold hover:bg-[#E97E15] transition-all shadow-lg"
-            >
-              Apply Now
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Header currentPage="financing" />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#ff990a] to-[#e87813]">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative pt-44 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/new-home.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#ff990a]/30 to-[#e87813]/40" />
+        <div className="relative max-w-7xl mx-auto">
           <Link href="/" className="inline-flex items-center text-white/80 hover:text-white mb-8 transition-colors">
             <ArrowLeft size={20} className="mr-2" />
             Back to Home
@@ -64,6 +56,22 @@ export default function RealEstateFinancingPage() {
                 <CheckCircle className="text-[#E87813] mr-2" size={20} />
                 <span className="text-white">Fast Approval</span>
               </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 mt-6">
+              <Link
+                href="/apply"
+                className="inline-flex items-center justify-center bg-[#E87813] text-white px-6 py-3 rounded-[2px] font-bold hover:bg-[#E97E15] transition-all shadow-lg"
+              >
+                Apply Now
+                <ChevronRight className="ml-2" size={18} />
+              </Link>
+              <Link
+                href="/calculator"
+                className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-[2px] font-semibold border-2 border-white/70 hover:bg-white/20 transition-all"
+              >
+                Loan Calculator
+                <ChevronRight className="ml-2" size={18} />
+              </Link>
             </div>
           </div>
         </div>
@@ -369,14 +377,7 @@ export default function RealEstateFinancingPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#003366] text-white py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-white/60 text-sm">
-            © 2025 Sunshine Finance Ltd. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

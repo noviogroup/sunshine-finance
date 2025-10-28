@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 interface HeaderProps {
-  currentPage?: 'home' | 'about' | 'financing' | 'contact';
+  currentPage?: 'home' | 'about' | 'financing' | 'contact' | 'calculator';
 }
 
 export default function Header({ currentPage = 'home' }: HeaderProps) {
@@ -112,6 +112,14 @@ export default function Header({ currentPage = 'home' }: HeaderProps) {
                 Financing
               </Link>
               <Link
+                href="/calculator"
+                className={`transition-colors font-medium text-lg ${
+                  currentPage === 'calculator' ? 'text-[#E87813] font-semibold' : 'text-gray-700 hover:text-[#E87813]'
+                }`}
+              >
+                Calculator
+              </Link>
+              <Link
                 href="/contact"
                 className={`transition-colors font-medium text-lg ${
                   currentPage === 'contact' ? 'text-[#E87813] font-semibold' : 'text-gray-700 hover:text-[#E87813]'
@@ -168,6 +176,15 @@ export default function Header({ currentPage = 'home' }: HeaderProps) {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Financing
+              </Link>
+              <Link
+                href="/calculator"
+                className={`block py-2 font-medium text-lg ${
+                  currentPage === 'calculator' ? 'text-[#E87813] font-semibold' : 'text-gray-700 hover:text-[#E87813]'
+                }`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Calculator
               </Link>
               <Link
                 href="/contact"
