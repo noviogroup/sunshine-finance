@@ -1,5 +1,5 @@
 import HomeClient from './HomeClient';
 
-export default function HomePage() {
+export default async function HomePage() {
   return <HomeClient />;
 }
